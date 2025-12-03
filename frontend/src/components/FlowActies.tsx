@@ -21,9 +21,6 @@ import {
   Package,
   Cpu,
   Workflow,
-  CheckCircle,
-  AlertCircle,
-  Clock,
   Zap
 } from 'lucide-react'
 

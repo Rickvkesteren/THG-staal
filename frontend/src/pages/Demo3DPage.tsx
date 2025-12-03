@@ -48,7 +48,11 @@ function Element3D({
     schoor: '#f97316',
     spant: '#ec4899',
     windverband: '#84cc16',
-    vloerligger: '#14b8a6'
+    vloerligger: '#14b8a6',
+    gording: '#a855f7',
+    dakspoor: '#0ea5e9',
+    stijl: '#22c55e',
+    regel: '#eab308'
   }
   
   const baseColor = colorMode === 'conditie' 

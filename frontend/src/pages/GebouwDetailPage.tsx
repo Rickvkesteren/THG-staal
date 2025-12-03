@@ -41,6 +41,10 @@ const typeIcons: Record<ElementType, string> = {
   windverband: '╳',
   vloerligger: '═',
   spant: '⌂',
+  gording: '┅',
+  dakspoor: '┄',
+  stijl: '│',
+  regel: '─',
 }
 
 export default function GebouwDetailPage() {

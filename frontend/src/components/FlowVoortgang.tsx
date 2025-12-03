@@ -16,7 +16,6 @@ import {
   Truck,
   CheckCircle,
   Circle,
-  Clock,
   AlertCircle,
   ChevronRight,
   Play
@@ -59,7 +58,7 @@ const FASE_KLEUREN = {
   3: { text: 'text-purple-600', bg: 'bg-purple-500', light: 'bg-purple-50', border: 'border-purple-200' },
 }
 
-export default function FlowVoortgang({ gebouwId, gebouwNaam, stappen, compact = false }: Props) {
+export default function FlowVoortgang({ gebouwNaam, stappen, compact = false }: Props) {
   const voltooideStappen = stappen.filter(s => s.status === 'voltooid').length
   const totaalStappen = stappen.length
   const voortgangPercentage = Math.round((voltooideStappen / totaalStappen) * 100)
@@ -202,7 +201,7 @@ export default function FlowVoortgang({ gebouwId, gebouwNaam, stappen, compact =
             
             <div className={`rounded-xl p-3 ${FASE_KLEUREN[fase.nummer as keyof typeof FASE_KLEUREN].light} ${FASE_KLEUREN[fase.nummer as keyof typeof FASE_KLEUREN].border} border`}>
               <div className="grid gap-2">
-                {fase.stappen.map((stap, idx) => {
+                {fase.stappen.map((stap) => {
                   const StatusIcon = STATUS_CONFIG[stap.status].icon
                   
                   return (

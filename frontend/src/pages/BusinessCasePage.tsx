@@ -7,18 +7,12 @@ import {
   Truck,
   Factory,
   Recycle,
-  Scale,
   Calculator,
-  PieChart,
-  BarChart3,
-  ArrowRight,
   CheckCircle2,
   AlertTriangle,
   Leaf,
   Building2,
   Euro,
-  Percent,
-  Clock,
   Users
 } from 'lucide-react'
 
@@ -427,7 +421,6 @@ export default function BusinessCasePage() {
     // Kosten
     const totaleKostenPerTon = KOSTEN_POSTEN.reduce((sum, k) => sum + k.bedragPerTon, 0)
     const bewerkingsKosten = totaleKostenPerTon * selectedGebouw.totaalGewichtTon * aanpassingen.bewerkingsKostenFactor
-    const afvalKosten = afvalGewicht * 50 // €50/ton voor schroot verkoop (negatief)
     const totaleKosten = bewerkingsKosten - (afvalGewicht * 150) // Schroot opbrengst ~€150/ton
     
     // Opbrengsten

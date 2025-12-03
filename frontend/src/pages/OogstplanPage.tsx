@@ -58,7 +58,7 @@ interface DemontageElement {
   positie: { x: number; y: number; z: number }
   rotatie: { x: number; y: number; z: number }
   volgorde: number | null // null = nog niet toegewezen
-  type: 'kolom' | 'ligger' | 'spant' | 'schoor' | 'gordel' | 'stabiliteit'
+  type: string // Flexibel type om compatibel te zijn met verschillende element types
   snijpunten: Snijpunt[]
 }
 
@@ -808,7 +808,7 @@ export default function OogstplanPage() {
       positie: el.positie,
       rotatie: el.rotatie,
       volgorde: null,
-      type: el.type || (['kolom', 'ligger', 'spant', 'schoor', 'gordel', 'stabiliteit'][idx % 6] as DemontageElement['type']),
+      type: el.type || ['kolom', 'ligger', 'spant', 'schoor', 'gordel', 'stabiliteit'][idx % 6],
       snijpunten: []
     }))
   })
