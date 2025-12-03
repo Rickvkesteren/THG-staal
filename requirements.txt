@@ -1,0 +1,36 @@
+# Core
+pydantic>=2.0
+sqlalchemy>=2.0
+alembic>=1.12
+
+# API
+fastapi>=0.104
+uvicorn>=0.24
+
+# Data Processing
+pandas>=2.0
+numpy>=1.24
+
+# Optimization
+scipy>=1.11
+ortools>=9.7  # Google OR-Tools voor optimalisatie
+
+# CAD/BIM
+ifcopenshell>=0.7  # IFC bestanden lezen/schrijven
+ezdxf>=1.1  # DXF bestanden
+
+# Reporting
+reportlab>=4.0  # PDF generatie
+jinja2>=3.1  # Template engine
+
+# Utilities
+python-dateutil>=2.8
+uuid>=1.30
+
+# Testing
+pytest>=7.4
+pytest-asyncio>=0.21
+
+# Development
+black>=23.0
+mypy>=1.6
