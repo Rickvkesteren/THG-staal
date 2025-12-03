@@ -6,7 +6,7 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   // Base path voor GitHub Pages - wordt ingesteld via environment variable
-  base: process.env.GITHUB_PAGES ? '/Ontmantelingsplan/' : '/',
+  base: process.env.GITHUB_PAGES ? '/THG-staal/' : '/',
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
