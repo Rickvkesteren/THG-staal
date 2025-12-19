@@ -5,6 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend</title>
+    <script>
+      (function () {
+        // If we arrived here via 404.html redirect, restore the original path.
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (!p) return;
+
+        params.delete('p');
+
+        // Vite replaces %BASE_URL% at build time
+        var base = '%BASE_URL%';
+        if (!base.endsWith('/')) base += '/';
+
+        var restoredPath = decodeURIComponent(p).replace(/^\/+/, '');
+        var rest = params.toString();
+        var search = rest ? '?' + rest : '';
+
+        window.history.replaceState(null, '', base + restoredPath + search + window.location.hash);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

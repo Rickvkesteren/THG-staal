@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting…</title>
+    <script>
+      (function () {
+        // Vite replaces %BASE_URL% at build time
+        var base = '%BASE_URL%';
+        if (!base.endsWith('/')) base += '/';
+
+        var path = window.location.pathname || '/';
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+
+        // Convert absolute path to a path relative to the app base
+        var relative;
+        if (path.startsWith(base)) {
+          relative = path.slice(base.length);
+        } else {
+          relative = path.replace(/^\/+/, '');
+        }
+
+        var target = base + '?p=' + encodeURIComponent(relative);
+        if (search) target += '&' + search.slice(1);
+        target += hash;
+
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
