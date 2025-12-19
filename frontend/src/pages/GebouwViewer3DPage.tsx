@@ -36,6 +36,8 @@ import {
   FileText
 } from 'lucide-react'
 import * as THREE from 'three'
+
+import interBoldWoffUrl from '@fontsource/inter/files/inter-latin-700-normal.woff?url'
 import { MOCK_GEBOUWEN, getGebouwStatistieken, type MockGebouw } from '../data/mockBuildings'
 import type { CADElement, Conditie, ElementType } from '../types'
 
@@ -151,7 +153,7 @@ function VolgordeLabel({ positie, nummer }: { positie: [number, number, number];
         color="white"
         anchorX="center"
         anchorY="middle"
-        font="/fonts/Inter-Bold.woff"
+        font={interBoldWoffUrl}
       >
         {nummer}
       </Text>
